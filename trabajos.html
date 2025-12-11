@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Galería de Trabajos - Galería Virtual</title>
+    <link rel="icon" type="image/png" href="img/360_F_432657539_7DuTQOx9Hux8E2yESHxKPWJX8sArkSDi.jpg" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="trabajos.css" />
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html"><img src="img/360_F_432657539_7DuTQOx9Hux8E2yESHxKPWJX8sArkSDi.jpg"
+                    alt="Logo Galería" /></a>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="trabajos.html" class="active">Trabajos</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+
+        <div class="nav-right">
+            <div class="user-menu">
+                <i class="fa-solid fa-user" id="userIcon"></i>
+                <div class="login-dropdown" id="loginDropdown">
+                    <form id="loginForm">
+                        <input type="email" id="loginEmail" placeholder="Correo electrónico" required />
+                        <input type="password" id="loginPassword" placeholder="Contraseña" required />
+                        <button type="submit">Iniciar sesión</button>
+                    </form>
+                    <p>O con Google</p>
+                    <button id="googleLoginBtn" class="google-btn">
+                        <i class="fa-brands fa-google"></i> Iniciar sesión con Google
+                    </button>
+                    <p>No tienes cuenta? <a href="registro.html">Regístrate</a></p>
+                </div>
+            </div>
+
+            <div class="cart-icon" id="cartIcon">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <div class="cart-dropdown" id="cartDropdown">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="arte-section">
+            <div class="arte-header">
+                <h2>Galería de trabajos</h2>
+            </div>
+
+            <div class="arte-tools">
+                <div class="search-container">
+                    <input type="text" id="searchInput" placeholder="Buscar por título">
+                    <button id="searchBtn">Buscar</button>
+                </div>
+                <button id="uploadArtBtn">Subir Imagen</button>
+            </div>
+
+            <input type="file" id="artImage" accept="image/*" class="hidden">
+
+            <div id="addArtForm" class="modal hidden">
+                <div class="modal-content">
+                    <span id="closeForm" style="float:right;cursor:pointer;">&times;</span>
+                    <h3>Subir nuevo Archivo</h3>
+
+                    <label>Título del Trabajo</label>
+                    <input type="text" id="artName" placeholder="Trabajo" required>
+
+                    <label>Precio</label>
+                    <div class="price-input">
+                        <span class="currency">(S/)</span>
+                        <input type="number" id="price" placeholder="Precio" required>
+                    </div>
+
+                    <label>Descripción</label>
+                    <textarea id="description" placeholder="Descripción del archivo" required></textarea>
+
+                    <label>Archivo (rar, zip, docx, etc.)</label>
+                    <input type="file" id="fileMain"
+                        accept=".rar,.zip,.7zip,.pdf,.doc,.docx,.ppt,.pptx,.xls,.xlsx,image/*" required>
+
+                    <label>Portada</label>
+                    <input type="file" id="thumbnail" accept="image/*">
+
+                    <img id="imagePreview" class="preview hidden" alt="Vista previa"
+                        style="max-width:150px; display:block; margin-top:8px;">
+
+                    <button id="saveArt">Subir Trabajo</button>
+                </div>
+            </div>
+
+
+            <div id="gallery" class="gallery"></div>
+
+            <div id="artModal" class="modal hidden">
+                <div class="modal-content modal-art">
+                    <span id="closeArtModal" class="close-btn">&times;</span>
+
+                    <div id="artModalContent">
+                    </div>
+                </div>
+            </div>
+
+    </main>
+    </section>
+
+    <footer>
+        <div class="social">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+        <p>&copy; 2025 Galería Virtual | Todos los derechos reservados</p>
+    </footer>
+
+    <script type="module" src="firebaselogin.js"></script>
+    <script type="module" src="mainsesion.js"></script>
+    <script type="module" src="trabajos.js"></script>
+    <script type="module" src="navbar.js"></script>
+    <script type="module" src="carrito.js"></script>
+
+
+
+</body>
+
+</html>

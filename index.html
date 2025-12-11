@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galería Virtual</title>
+    <link rel="icon" type="image/png" href="img/360_F_432657539_7DuTQOx9Hux8E2yESHxKPWJX8sArkSDi.jpg" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html"><img src="img/360_F_432657539_7DuTQOx9Hux8E2yESHxKPWJX8sArkSDi.jpg"
+                    alt="Logo Galería" /></a>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="trabajos.html">Trabajos</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+
+        <div class="nav-right">
+            <div class="user-menu">
+                <i class="fa-solid fa-user" id="userIcon"></i>
+                <div class="login-dropdown" id="loginDropdown">
+                    <form id="loginForm">
+                        <input type="email" id="loginEmail" placeholder="Correo electrónico" required />
+                        <input type="password" id="loginPassword" placeholder="Contraseña" required />
+                        <button type="submit">Iniciar sesión</button>
+                    </form>
+                    <p>O con Google</p>
+                    <button id="googleLoginBtn" class="google-btn">
+                        <i class="fa-brands fa-google"></i> Iniciar sesión con Google
+                    </button>
+                    <p>No tienes cuenta? <a href="registro.html">Regístrate</a></p>
+                </div>
+            </div>
+
+            <div class="cart-icon" id="cartIcon">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <div class="cart-dropdown" id="cartDropdown">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>
+                Comparte tu creatividad y llega más lejos en GV
+            </h1>
+            <p>
+                Nuestra plataforma permite a estudiantes exponer y vender sus trabajos de diseño,
+                ilustración, desarrollo de software y más.
+                <br>
+                <br>
+            <p>Haz que tus ideas brillen,
+                gana visibilidad y fomenta tu emprendimiento creativo.</p>
+            </p>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>Creaciones Estudiantiles Destacadas</h2>
+        <p>
+            <strong>Descubre y apoya los trabajos de nuestros estudiantes.
+                Cada creación refleja talento y pasión,
+                y está disponible para que la explores y adquieras.</strong>
+        </p>
+        <br>
+        <div class="grid">
+            <div class="card"><img src="https://rogerbit.com/wprb/wp-content/uploads/2022/09/portada-1-820x461.png">
+                <p><strong>Control de luces con Arduino</strong></p>
+                <p>Un proyecto que automatiza luces usando sensores y Arduino.</p>
+            </div>
+            <div class="card"><img src="https://www.lawebdelprogramador.com/usr/352000/352736/5ea7192975bc1-adv.png">
+                <p><strong>Juego de adivinanza en Python</strong></p>
+                <p>Un divertido juego interactivo que pone a prueba tu lógica.</p>
+            </div>
+            <div class="card"><img src="https://i.pinimg.com/originals/39/c0/a3/39c0a3ce8e7c5f84d668e8af212ad0f4.jpg"
+                    oncontextmenu="return false" draggable="false">
+                <p><strong>Poster digital creativo</strong></p>
+                <p>Un diseño digital para promover la sostenibilidad.</p>
+            </div>
+            <div class="card"><img src="https://i.ytimg.com/vi/RUsVpe_wZB0/maxresdefault.jpg">
+                <p><strong>Sensor de temperatura con Arduino</strong></p>
+                <p>Monitorea la temperatura y activa alertas automáticamente.</p>
+            </div>
+            <div class="card"><img src="https://static-cse.canva.com/blob/1105224/PORTFOLIO_IMG1.PNG"
+                    oncontextmenu="return false" draggable="false">
+                <p><strong>Portfolio Web Interactivo</strong></p>
+                <p>Un sitio web dinámico para mostrar trabajos creativos y proyectos.</p>
+            </div>
+            <div class="card"><img src="https://i.blogs.es/02367b/to-do-reminder/650_1200.jpg">
+                <p><strong>App de recordatorios estudiantiles</strong></p>
+                <p>Organiza tareas y recordatorios de manera sencilla y eficiente.</p>
+            </div>
+            <div class="card"><img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNzbT-No8Ta9Y2QmDyk9jvZy7vuIKk0aC-iA&s"
+                    oncontextmenu="return false" draggable="false">
+                <p><strong>Ilustración digital de fantasía</strong></p>
+                <p>Una obra creativa que mezcla imaginación y color digital.</p>
+            </div>
+            <div class="card"><img
+                    src="https://www.skillshare.com/blog/wp-content/uploads/2023/12/Skillshare-how-to-use-blender-example-project-1-1024x564.jpg">
+                <p><strong>Animación corta en Blender</strong></p>
+                <p>Una animación 3D que cuenta una historia en pocos segundos.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" style="background-color:#fffbe6;">
+        <h2>Trabajos Recientes Subidos</h2>
+        <div class="grid" id="recentArtworksGallery">
+            <p>Cargando trabajos...</p>
+        </div>
+        <div style="text-align:center; margin-top: 20px;">
+            <a href="trabajos.html" class="button-link">Ver todos los trabajos</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="social">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+        <p>&copy; 2025 Galería Virtual | Todos los derechos reservados</p>
+    </footer>
+
+    <script type="module" src="firebaselogin.js"></script>
+    <script type="module" src="mainsesion.js"></script>
+    <script type="module" src="navbar.js"></script>
+    <script type="module" src="carrito.js"></script>
+    <script type="module" src="index.js"></script>
+
+</body>
+
+</html>
